@@ -13,4 +13,6 @@
         <property name="beanName" value="beanName"/>
     </bean>
     <bean id="myBeanFacotryPostProcessor" class="com.ruyuan.container.factoryPostProcessor.MyBeanFactoryPostProcessor"></bean>
+    <bean id="studentPostProcessor" class="com.ruyuan.container.beanPostProcessor.StudentPostProcessor"></bean>
+    <bean class="com.ruyuan.container.listener.MyListener"></bean>
 </beans>

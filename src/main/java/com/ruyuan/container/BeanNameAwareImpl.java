@@ -15,5 +15,6 @@ public class BeanNameAwareImpl implements BeanNameAware {
     @Override
     public void setBeanName(String beanName) {
         this.beanName = beanName;
+        System.out.println("BeanNameAwareImpl beanName:" + beanName);
     }
 }

@@ -2,7 +2,15 @@ package com.ruyuan.container;
 
 import org.springframework.beans.factory.BeanNameAware;
 
-public class Student implements BeanNameAware {
+/**
+ * @author zvan
+ */ //public class Student implements BeanNameAware {
+public class Student {
+
+    private String name;
+    private int age;
+
+
     public String getName() {
         return name;
     }
@@ -11,10 +19,30 @@ public class Student implements BeanNameAware {
         this.name = name;
     }
 
-    private String name = "Student";
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    //@Override
+    //public void setBeanName(String name) {
+    //    System.out.println("beanName:" + name);
+    //}
 
     @Override
-    public void setBeanName(String name) {
-        System.out.println("beanName:" + name);
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                '}';
     }
 }

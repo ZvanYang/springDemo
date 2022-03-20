@@ -1,4 +1,4 @@
-package com.ruyuan.container.beanPostProcessor;
+package com.ruyuan.container.beanpostprocessor;
 
 import com.ruyuan.container.Student;
 import org.springframework.beans.BeansException;

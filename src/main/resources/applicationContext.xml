@@ -2,17 +2,29 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="student" class="com.ruyuan.container.Student">
-        <constructor-arg name="name">
-            <value>小明</value>
-        </constructor-arg>
-        <constructor-arg name="age">
-            <value>17</value>
-        </constructor-arg>
+<!--        <constructor-arg name="name">-->
+<!--            <value>小明</value>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg name="age">-->
+<!--            <value>17</value>-->
+<!--        </constructor-arg>-->
     </bean>
     <bean id="beanNameAwareImpl" class="com.ruyuan.container.BeanNameAwareImpl">
         <property name="beanName" value="beanName"/>
     </bean>
-    <bean id="myBeanFacotryPostProcessor" class="com.ruyuan.container.factoryPostProcessor.MyBeanFactoryPostProcessor"></bean>
-    <bean id="studentPostProcessor" class="com.ruyuan.container.beanPostProcessor.StudentPostProcessor"></bean>
+    <bean id="myBeanFacotryPostProcessor" class="com.ruyuan.container.factorypostprocessor.MyBeanFactoryPostProcessor"></bean>
+    <bean id="studentPostProcessor" class="com.ruyuan.container.beanpostprocessor.StudentPostProcessor"></bean>
     <bean class="com.ruyuan.container.listener.MyListener"></bean>
+    <bean id="studentFactoryBean" class="com.ruyuan.container.factorybean.StudentFactoryBean"></bean>
+
+    <bean id="baseStudent" class="com.ruyuan.container.methodoverrides.BaseStudent">
+        <lookup-method name="getStudent" bean="student1"></lookup-method>
+    </bean>
+    <bean id="student1" class="com.ruyuan.container.methodoverrides.Student1"></bean>
+
+
+    <bean id="student2" class="com.ruyuan.container.methodoverrides.Student2">
+        <replaced-method name="sayHello" replacer="replacer"/>
+    </bean>
+    <bean id="replacer" class="com.ruyuan.container.methodoverrides.StudentReplacer"/>
 </beans>

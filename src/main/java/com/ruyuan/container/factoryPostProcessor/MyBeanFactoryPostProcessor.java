@@ -1,4 +1,4 @@
-package com.ruyuan.container.factoryPostProcessor;
+package com.ruyuan.container.factorypostprocessor;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanDefinition;

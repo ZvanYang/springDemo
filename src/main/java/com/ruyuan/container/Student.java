@@ -1,7 +1,5 @@
 package com.ruyuan.container;
 
-import org.springframework.beans.factory.BeanNameAware;
-
 /**
  * @author zvan
  */ //public class Student implements BeanNameAware {
@@ -28,10 +26,10 @@ public class Student {
         this.age = age;
     }
 
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+    //public Student(String name, int age) {
+    //    this.name = name;
+    //    this.age = age;
+    //}
 
     //@Override
     //public void setBeanName(String name) {

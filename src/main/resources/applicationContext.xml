@@ -27,4 +27,6 @@
         <replaced-method name="sayHello" replacer="replacer"/>
     </bean>
     <bean id="replacer" class="com.ruyuan.container.methodoverrides.StudentReplacer"/>
+    <bean id="student3" class="com.ruyuan.container.factorymethod.StudentFactory"
+          factory-method="getStudentObject"/>
 </beans>
